@@ -143,6 +143,10 @@ final class LogcatInfo {
             info.tag = matcher.group(5);
             info.content = matcher.group(6);
         }
+        if(null!=info.tag){
+            //去除tag首尾的空格
+            info.tag = info.tag.trim();
+        }
         return info;
     }
 
